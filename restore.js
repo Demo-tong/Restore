@@ -3,8 +3,18 @@
  */
 'use strict';
 
-function getHistoryDatas(historyData){
+function getHistoryDatas(historyData) {
   return historyData.split('\n\n');
 }
 
-module.exports = getHistoryDatas;
+function getTimeHistoryDatas(historyDatas) {
+
+  return historyDatas.map((item)=> {
+    return item.split('\n');
+  });
+}
+
+module.exports = {
+  getHistoryDatas,
+  getTimeHistoryDatas
+};
