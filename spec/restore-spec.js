@@ -58,3 +58,16 @@ cat1 12 8 3 4`];
     expect(doRestore.getTimeHistoryDatas(historyDatas)).toEqual(expected);
   });
 });
+
+describe("isLeagelId", ()=> {
+  it("should return true", ()=> {
+    let input = `dcfa0c7a-5855-4ed2-bc8c-4accae8bd155`;
+
+    expect(doRestore.isLeagalId(input)).toBe(true);
+  });
+
+  it("should return false", ()=>{
+    let input = `dcfa0c7a-5855-4ed2-bc84accae8bd155`;
+    expect(doRestore.isLeagalId(input)).toBe(false);
+  });
+});

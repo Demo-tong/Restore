@@ -14,7 +14,13 @@ function getTimeHistoryDatas(historyDatas) {
   });
 }
 
+function isLeagalId(id){
+  let pattern = /^[\w]{8}-[\w]{4}-[\w]{4}-[\w]{4}-[\w]{12}$/;
+  return pattern.test(id);
+}
+
 module.exports = {
   getHistoryDatas,
-  getTimeHistoryDatas
+  getTimeHistoryDatas,
+  isLeagalId
 };
